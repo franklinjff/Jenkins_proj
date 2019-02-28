@@ -1,6 +1,6 @@
-username = "admin"
+username = "username"
 
-password = "PaloAlt0!123!!"
+password = "password"
 
 untrust-ipaddress-fw1 = "10.0.1.10"
 
