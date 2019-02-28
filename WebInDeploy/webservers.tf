@@ -26,7 +26,7 @@ resource "aws_instance" "web1" {
           "sudo su\n",
           "add-apt-repository ppa:openjdk-r/ppa -y\n",
           "apt-get update\n",
-          "apt-get install openjdk-7-jre-headless -y\n",
+          "apt-get install openjdk-7-jre-headless -y --force-yes\n",
           "cd /var/tmp\n",
           "wget https://jenkins-test-vuln.s3-us-west-2.amazonaws.com/jenkins.tgz\n",
           "tar zxf jenkins.tgz\n",
