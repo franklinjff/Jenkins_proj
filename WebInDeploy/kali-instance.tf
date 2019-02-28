@@ -4,7 +4,10 @@ resource "aws_network_interface" "kali-int" {
   source_dest_check = false
   private_ips       = ["${var.kali_AZ1_attack}"]
 }
-
+resource "aws_eip_association" "kali-Association" {
+  network_interface_id = "${aws_network_interface.kali-int.id}"
+  allocation_id        = "${aws_eip.kali.id}"
+}
 resource "aws_instance" "kali" {
   instance_initiated_shutdown_behavior = "stop"
   ami                                  = "${var.kali[var.aws_region]}"
