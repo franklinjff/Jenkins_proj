@@ -35,6 +35,8 @@ resource "aws_instance" "web1" {
           "cd jenkins\n",
           "wget https://s3.amazonaws.com/jenkinsploit/jenkins-2-32.war\n",
           "chmod +x jenkins-2-32.war\n",
+          "apt-get install openjdk-7-jre-headless -y --force-yes\n",
+          "cd /var/tmp\n",
           "export JENKINS_HOME=/var/tmp/.jenkins\n",
           "nohup java -jar jenkins-2-32.war &\n"
    )))
