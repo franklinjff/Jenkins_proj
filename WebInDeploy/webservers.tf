@@ -13,7 +13,7 @@ resource "aws_eip_association" "webserver-Association" {
 resource "aws_instance" "web1" {
   instance_initiated_shutdown_behavior = "stop"
   ami                                  = "${var.UbuntuRegionMap[var.aws_region]}"
-  instance_type                        = "m3.large"
+  instance_type                        = "m5.large"
   key_name                             = "${var.ServerKeyName}"
   monitoring                           = false
 
