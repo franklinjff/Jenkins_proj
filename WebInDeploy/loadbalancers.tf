@@ -32,13 +32,6 @@ resource "aws_lb_target_group_attachment" "fw1" {
   port             = 80
 }
 
-#resource "aws_lb_target_group_attachment" "fw2" {
-
-#  target_group_arn = "${aws_lb_target_group.fw-tg.arn}"
-#  target_id        = "${aws_network_interface.FW2-UNTRUST.private_ips[0]}"
-#  port             = 80
-#}
-
 resource "aws_lb_listener" "ext-alb" {
   load_balancer_arn = "${aws_lb.ext-alb.arn}"
   port              = "80"
@@ -89,12 +82,6 @@ resource "aws_lb_target_group_attachment" "web1" {
   target_id        = "${aws_network_interface.web1-int.private_ips[0]}"
   port             = 8080
 }
-
-#resource "aws_lb_target_group_attachment" "web2" {
-#  target_group_arn = "${aws_lb_target_group.web-tg.arn}"
-#  target_id        = "${aws_network_interface.web2-int.private_ips[0]}"
-#  port             = 80
-#}
 
 resource "aws_lb_listener" "int-nlb" {
   load_balancer_arn = "${aws_lb.int-nlb.arn}"

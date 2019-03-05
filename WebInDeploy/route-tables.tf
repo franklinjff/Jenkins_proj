@@ -14,6 +14,15 @@ resource "aws_route_table" "public" {
 
 resource "aws_route_table" "private" {
   vpc_id = "${aws_vpc.main.id}"
+
+  tags {
+    Name = "Private"
+  }
+
+  route {
+    cidr_block           = "0.0.0.0/0"
+    network_interface_id = "${aws_network_interface.FW1-TRUST.id}"
+  }
 }
 
 # Association

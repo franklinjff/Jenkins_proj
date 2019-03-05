@@ -72,7 +72,7 @@ resource "panos_service_object" "so_81" {
 resource "panos_address_object" "intNLB" {
   name        = "AWS-Int-NLB"
   type        = "fqdn"
-  value       = "${var.int-nlb-fqdn}"
+  value       = "${var.nlb-dns}"
   description = "AWS Int NLB Address"
 }
 

@@ -1,12 +1,12 @@
-aws_region = "AWS Rehion Here"
+aws_region = "Place Region Here"
 
-ServerKeyName = "AWS Regional Keypair"
+ServerKeyName = "Place AWs Keypair Here"
 
-bootstrap_s3bucket = "S3 Bootstrap Name"
+bootstrap_s3bucket = "Place S3 Bucket Name Here"
 
-aws_access_key = "API Access Key Here"
+aws_access_key = "Place AWS API Access Key Here"
 
-aws_secret_key = "API Secret Key Here"
+aws_secret_key = "Place AWS API Secret Key Here"
 
 waf_prefix = "managed"
 

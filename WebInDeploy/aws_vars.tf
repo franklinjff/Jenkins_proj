@@ -10,15 +10,11 @@ variable "WebCIDR_MGMT1" {}
 variable "WebCIDR_MGMT2" {}
 variable "WebSRV1_AZ1_Trust" {}
 
-#variable "WebSRV2_AZ2_Trust" {}
 variable "FW1_Untrust_IP" {}
 
 variable "FW1_Trust_IP" {}
 variable "FW1_mgmt_IP" {}
 
-#variable "FW2_Untrust_IP" {}
-#variable "FW2_Trust_IP" {}
-#variable "FW2_mgmt_IP" {}
 variable "bootstrap_s3bucket" {}
 
 variable "VPCName" {}
@@ -28,13 +24,12 @@ variable "StackName" {}
 variable "attackcidr1" {}
 variable "KALICIDR" {}
 
-#variable "kali" {}
 variable "kali_AZ1_attack" {}
 
+#VMSeries 8.1 Bundle 2 Paygo 
 variable "PANFWRegionMap" {
   type = "map"
 
-  #VMSeries 8.1 Bundle 2 Paygo 
   default = {
     "us-east-1"      = "ami-bffd3cc2"
     "us-east-2"      = "ami-9ef3c5fb"
@@ -60,7 +55,7 @@ variable "kali" {
     "us-east-1"      = "ami-07360d1b1c9e13198"
     "us-east-2"      = "ami-0b2b9a650987b7d0c"
     "us-west-2"      = "ami-0f95cde6ebe3f5ec3"
-    "us-west-1"      = "ami-0ca147ef9bdebe4be"
+    "us-west-1"      = "ami-03e0ff3de0548396b"
     "eu-west-1"      = "ami-0281a537e64a74d1f"
     "eu-west-2"      = "ami-0effb6b7c7602646a"
     "eu-central-1"   = "ami-0fbb40f398aef1e61"
@@ -76,11 +71,11 @@ variable "kali" {
 variable "UbuntuRegionMap" {
   type = "map"
 
-  #Ubuntu Server 14.04 LTS (HVM)
+  #Ubuntu Server 16.04 LTS (HVM)
   default = {
     "us-east-1"      = "ami-065c9a4762c4f787e"
     "us-east-2"      = "ami-0444e91f56f79d021"
-    "us-west-1"      = "ami-0d1c4f9551a9fc202"
+    "us-west-1"      = "ami-03e0ff3de0548396b"
     "us-west-2"      = "ami-04b2b09887d4690bf"
     "eu-west-1"      = "ami-0cb24a4facc52bcf2"
     "eu-west-2"      = "ami-09f492b3362c7076d"
