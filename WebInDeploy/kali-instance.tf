@@ -13,7 +13,7 @@ resource "aws_eip_association" "kali-Association" {
 resource "aws_instance" "kali" {
   instance_initiated_shutdown_behavior = "stop"
   ami                                  = "${var.kali[var.aws_region]}"
-  instance_type                        = "m3.large"
+  instance_type                        = "m5.large"
   key_name                             = "${var.ServerKeyName}"
   monitoring                           = false
 
